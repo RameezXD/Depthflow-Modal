@@ -32,7 +32,7 @@ Batch-converts PNG images in /data/images to MP4 videos using DepthFlow.
 
 Place your PNG images in the /data/images directory.
 
-    Run the script:
+Run the script:
 
     modal run depthflow_bulk.py
 
