@@ -3,9 +3,10 @@ Overview
 
 This repository provides a minimal Python interface to run DepthFlow — the soul of this project — on Modal's serverless GPU infrastructure.
 
-Think of this as bringing the magic of Immersity AI to the open-source world — powered by DepthFlow, crafted by BrokenSource, and simply deployed via a script anyone can run.
+Think of this as bringing the magic of Immersity AI to the open-source world — powered by [DepthFlow](https://github.com/BrokenSource/DepthFlow), crafted by BrokenSource, and simply deployed via a script anyone can run.
 
-All credit for the core functionality goes to DepthFlow, a remarkable open-source tool for image-to-video transformation using motion and depth inference. This repo merely wraps it in a Modal deployment for ease of use and scaling.
+All credit for the core functionality goes to [DepthFlow](https://github.com/BrokenSource/DepthFlow), a remarkable open-source tool for image-to-video transformation using motion and depth inference. This repo merely wraps it in a Modal deployment for ease of use and scaling.
+Make sure to check his repo [DepthFlow](https://github.com/BrokenSource/DepthFlow) and his website [Brokensrc](https://brokensrc.dev/)
 ✨ Features
 
 - ⚙️ Batch Processing — Convert multiple images into videos using DepthFlow with GPU acceleration.
