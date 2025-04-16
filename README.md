@@ -82,6 +82,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request f
 This project is licensed under the MIT License. See the LICENSE file for details.
 🙏 Acknowledgments
 
-🎥 DepthFlow — the soul of this project. Without it, there is no magic. Like Immersity AI, but open-source and community-driven.
+🎥 DepthFlow — the soul of this project. Without it, there is no magic. Like Immersity AI, but open-source and written buy Brokensoure (https://github.com/BrokenSource).
 
 ☁️ Modal — for enabling seamless, serverless GPU computing.
