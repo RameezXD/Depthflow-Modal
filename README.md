@@ -1,63 +1,84 @@
-# DepthFlow Modal Integration
+🌌 DepthFlow Modal Integration
+Overview
 
-## Overview
-This repository provides a very simple set of Python scripts to integrate the DepthFlow software with Modal, enabling efficient and scalable processing of images and videos. The scripts leverage Modal's serverless capabilities to deploy DepthFlow applications with GPU acceleration and concurrent processing.
+This repository provides a minimal Python interface to run DepthFlow — the soul of this project — on Modal's serverless GPU infrastructure.
 
-## Features
-- **Batch Processing**: Process multiple images into videos using DepthFlow with GPU acceleration.
-- **Web Interface**: Deploy a Gradio-based web interface for DepthFlow.
-- **Scalable Deployment**: Utilize Modal's serverless infrastructure for efficient resource management.
-- **Logging**: Maintain success and error logs for processed files.
+    Think of this as bringing the magic of Immersity AI to the open-source world — powered by DepthFlow, crafted by BrokenSource, and simply deployed via a script anyone can run.
 
-## Requirements
-- Python 3.12
-- Modal account and CLI installed
-- NVIDIA GPU (T4 recommended) (as of right now it's the only one working )
+All credit for the core functionality goes to DepthFlow, a remarkable open-source tool for image-to-video transformation using motion and depth inference. This repo merely wraps it in a Modal deployment for ease of use and scaling.
+✨ Features
 
-## Scripts
+    ⚙️ Batch Processing — Convert multiple images into videos using DepthFlow with GPU acceleration.
 
-### 1. `depthflow_bulk.py`
-This script processes a batch of PNG images into MP4 videos using DepthFlow.
+    🌐 Web Interface — Gradio-powered GUI for easy access and real-time previews.
 
-#### Usage
-1. Place your PNG images in the `/data/images` directory.
-2. Run the script:
-   ```bash
-   modal run depthflow_bulk.py
-   ```
-3. Processed videos will be saved in the `/data/videos` directory.
+    📦 Serverless Scaling — Run on Modal’s on-demand infrastructure with parallel processing.
 
-#### Key Features
-- Automatically skips already processed files.
-- Logs success and error messages in `/data/logs`.
-- Configurable GPU, CPU, and memory allocation.
+    📁 Logging — Track processed files and errors via structured logs.
 
-### 2. `depthflow_gui.py`
-This script deploys a Gradio-based web interface for DepthFlow.
+🔧 Requirements
 
-#### Usage
-1. Run the script:
-   ```bash
-   modal serve depthflow_gui.py
-   ```
-2. Access the web interface at `http://localhost:7860`.
+    Python 3.12
 
-#### Key Features
-- Provides a user-friendly web interface for DepthFlow.
-- Supports concurrent inputs and multiple containers.
+    Modal account with CLI installed
 
-## Configuration
-Both scripts use a pre-configured Modal container image with the following dependencies:
-- `depthflow==0.9.0.dev1`
-- `torch==2.6.0` (CUDA 12.4)
-- `wget`, `git`, `ffmpeg`
+    NVIDIA GPU (T4 recommended for now)
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+📜 Scripts
+1. depthflow_bulk.py
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+Batch-converts PNG images in /data/images to MP4 videos using DepthFlow.
+🔹 Usage
 
-## Acknowledgments
-- [Modal](https://modal.com) for providing serverless infrastructure.
-- [DepthFlow](https://github.com/depthflow) for the image-to-video processing software.
+    Place your PNG images in the /data/images directory.
+
+    Run the script:
+
+modal run depthflow_bulk.py
+
+    Processed videos will be saved in /data/videos.
+
+✅ Highlights
+
+    Automatically skips already processed images.
+
+    Logs success and errors to /data/logs.
+
+    Customizable hardware allocation (CPU, GPU, memory).
+
+2. depthflow_gui.py
+
+Launches a Gradio web interface for DepthFlow.
+🔹 Usage
+
+Run the script:
+
+modal serve depthflow_gui.py
+
+✅ Highlights
+
+    Real-time image-to-video interface.
+
+    Supports concurrent users and container scaling.
+
+⚙️ Modal Configuration
+
+Both scripts use a pre-built Modal container with the following:
+
+    depthflow==0.9.0.dev1
+
+    torch==2.6.0 (CUDA 12.4)
+
+    Tools: wget, git, ffmpeg
+
+🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request for improvements or fixes.
+📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+🙏 Acknowledgments
+
+    🎥 DepthFlow — the soul of this project. Without it, there is no magic. Like Immersity AI, but open-source and community-driven.
+
+    ☁️ Modal — for enabling seamless, serverless GPU computing.
