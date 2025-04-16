@@ -35,9 +35,7 @@ Place your PNG images in the /data/images directory.
 
 Run the script:
 
-```bash
-   modal run depth_bulk.py
-   ```
+      modal run depth_bulk.py
 
 Processed videos will be saved in /data/videos.
 
