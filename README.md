@@ -16,14 +16,14 @@ This repository provides a very simple set of Python scripts to integrate the De
 
 ## Scripts
 
-### 1. `depth_bulk.py`
+### 1. `depthflow_bulk.py`
 This script processes a batch of PNG images into MP4 videos using DepthFlow.
 
 #### Usage
 1. Place your PNG images in the `/data/images` directory.
 2. Run the script:
    ```bash
-   modal run depth_bulk.py
+   modal run depthflow_bulk.py
    ```
 3. Processed videos will be saved in the `/data/videos` directory.
 
