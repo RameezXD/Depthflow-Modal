@@ -1,4 +1,4 @@
-🌌 DepthFlow Modal Integration
+🌌 [DepthFlow](https://github.com/BrokenSource/DepthFlow) Modal Integration
 Overview
 
 This repository provides a minimal Python interface to run DepthFlow — the soul of this project — on Modal's serverless GPU infrastructure.
@@ -82,6 +82,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request f
 This project is licensed under the MIT License. See the LICENSE file for details.
 🙏 Acknowledgments
 
-🎥 DepthFlow — the soul of this project. Without it, there is no magic. Like Immersity AI, but open-source and written buy Brokensoure (https://github.com/BrokenSource).
+🎥 [DepthFlow](https://github.com/BrokenSource/DepthFlow) — the soul of this project. Without it, there is no magic. Like Immersity AI, but open-source and written by [BrokenSource](https://github.com/BrokenSource).
+
 
 ☁️ Modal — for enabling seamless, serverless GPU computing.
