@@ -8,13 +8,14 @@ Think of this as bringing the magic of Immersity AI to the open-source world —
 All credit for the core functionality goes to DepthFlow, a remarkable open-source tool for image-to-video transformation using motion and depth inference. This repo merely wraps it in a Modal deployment for ease of use and scaling.
 ✨ Features
 
-⚙️ Batch Processing — Convert multiple images into videos using DepthFlow with GPU acceleration.
+- ⚙️ Batch Processing — Convert multiple images into videos using DepthFlow with GPU acceleration.
 
-🌐 Web Interface — Gradio-powered GUI for easy access and real-time previews.
+- 🌐 Web Interface — Gradio-powered GUI for easy access and real-time previews.
 
-📦 Serverless Scaling — Run on Modal’s on-demand infrastructure with parallel processing.
+- 📦 Serverless Scaling — Run on Modal’s on-demand infrastructure with parallel processing.
 
-📁 Logging — Track processed files and errors via structured logs.
+- 📁 Logging — Track processed files and errors via structured logs.
+
 
 🔧 Requirements
 
@@ -34,7 +35,9 @@ Place your PNG images in the /data/images directory.
 
 Run the script:
 
-    modal run depthflow_bulk.py
+```bash
+   modal run depth_bulk.py
+   ```
 
 Processed videos will be saved in /data/videos.
 
