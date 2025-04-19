@@ -36,15 +36,24 @@ class Depthflow:
 
     @modal.enter()
     def setup_depthflow(self):
+        # tmp path basically it resolves the issue with gradio interface where the videostakes forever to load due gradio's network limitations sometimes.
+        # Define custom temp path (e.g., /vol/tmp if you have a Modal volume or any location you want)
+        custom_tmp = "/vol/tmp"
+        os.makedirs(custom_tmp, exist_ok=True)
+
+        env = os.environ.copy()
+        env["TMPDIR"] = custom_tmp
+        
         # Start the DepthFlow Gradio server
         subprocess.Popen(
             ["python", "-m", "DepthFlow", "gradio"]
+            env=env,  # Pass the modified environment variables
         )
 
     @modal.web_server(port=7860, startup_timeout=120)
     def ui(self):
         # Define the web server endpoint
-        return "server is up!"
+        return "Depthflow is up!"
 
 # Deploy the app
 if __name__ == "__main__":
